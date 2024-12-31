@@ -1,0 +1,12 @@
+The following CSS code snippet is designed to style an image, making it responsive and preventing it from exceeding its container's width:
+
+```css
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+However, in some instances, it unexpectedly causes the image to be smaller than the container, even when there's enough space.
+
+This occurs primarily when the image's aspect ratio differs significantly from the container's aspect ratio, leading to an unintended scaling effect. The `max-width: 100%;` works as intended, but due to the `height: auto;`, the height is calculated proportionally, potentially making the entire image smaller than necessary.
