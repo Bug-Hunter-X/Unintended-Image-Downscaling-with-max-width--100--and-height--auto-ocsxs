@@ -1,0 +1,23 @@
+The solution involves using the width to the full container and then using padding-top to maintain the aspect ratio:
+
+```css
+.image-container {
+  width: 100%; /*Ensures the image always takes up the full container's width*/
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*Example Aspect Ratio Calculation for a 16:9 aspect ratio*/
+.image-container-16-9 {
+  padding-top: 56.25%; /* 9/16 = 0.5625 */
+}
+```
+
+This method ensures that the image always maintains its aspect ratio while using the full available width.
